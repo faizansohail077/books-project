@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 const routes = [
     { id: 0, link: "Home", goto: "" },
     { id: 1, link: "Order", goto: "" },
-    { id: 2, link: "Signup", goto: "" },
+    { id: 2, link: "Signup", goto: "/signup" },
 ]
 
 const Header = () => {
@@ -14,7 +15,9 @@ const Header = () => {
 
                 {routes?.map((r) => {
                     return (
-                        <p className='cursor-pointer pb-2 hover:border-b-2 border-black' key={r.id}>{r.link}</p>
+                        <Link href={r.goto} >
+                            <p className='cursor-pointer pb-2 hover:border-b-2 border-black' key={r.id}>{r.link}</p>
+                        </Link>
                     )
                 })}
             </div>
