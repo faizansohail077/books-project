@@ -3,13 +3,13 @@ import React from 'react'
 
 const routes = [
     { id: 0, link: "Home", goto: "" },
-    { id: 1, link: "Order", goto: "" },
+    { id: 1, link: "Order", goto: "/order" },
     { id: 2, link: "Signup", goto: "/signup" },
 ]
 
 const Header = () => {
     return (
-        <div className='mx-auto max-w-7xl p-3 md:p-0 ' >
+        <div className='mx-auto max-w-7xl p-3 lg:p-0 ' >
 
             <div className='flex justify-end gap-5 my-5'  >
 

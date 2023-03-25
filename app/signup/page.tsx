@@ -6,13 +6,13 @@ interface IPROP {
     clientEmail: string
 }
 
-const createAccount = async (data: any) => {
+const createAccount = async (data: IPROP) => {
     const res = await fetch('https://simple-books-api.glitch.me/api-clients', {
         method: 'POST',
         body: JSON.stringify(data),
         mode: 'no-cors'
     })
-    return res.json()
+    return res
 }
 
 const Signup = () => {

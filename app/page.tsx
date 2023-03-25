@@ -19,7 +19,8 @@ const capitalWord = (value: string) => {
 export default async function Home() {
   const data: IData[] = await getBooks()
   return (
-    <div className="mx-auto max-w-7xl my-10 p-3 md:p-0" >
+    <div className="mx-auto max-w-7xl my-10 p-3 lg:p-0" >
+      <h1 className="py-5 text-2xl font-bold" >Dynamic Books:</h1>
       {data?.map((d) => {
         return (
           <div key={d.id} className="cursor-pointer hover:animate-pulse p-3 border border-[#EAEAEA] flex flex-col gap-3 mt-2 shadow-md" >
